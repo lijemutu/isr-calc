@@ -1,21 +1,23 @@
 <script setup>
 import HeroTitle from './components/HeroTitle.vue'
 import Calculator from './components/Calculator.vue'
-import instructions from './components/Instructions.vue'
+import Instructions from './components/Instructions.vue'
 import Results from './components/Results.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
 
-    <div class="wrapper">
+    <div class="">
       <HeroTitle></HeroTitle>
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <Calculator></Calculator>
+    <Instructions></Instructions>
+    <Results></Results>
   </main>
 </template>
 
@@ -24,26 +26,14 @@ header {
   line-height: 1.5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+
 
 @media (min-width: 1024px) {
   header {
-    display: flex;
-    place-items: center;
+    display: block;
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
 }
 </style>
